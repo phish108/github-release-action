@@ -1,0 +1,18 @@
+name: 'GitHub Releases'
+author: 'phish108'
+description: 'Create github releases from your commits'
+branding:
+  icon: gift
+  color: blue
+inputs:
+  github-token:  # id of input
+    description: 'the GH token to connect to github from the action'
+    required: true
+  prerelease: 
+    description: 'Allow prereleases'
+    required: false
+    default: 'False'
+    
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
